@@ -8,7 +8,6 @@ RUN addgroup signal && \
     cat signal-desktop-keyring.gpg | tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null && \
     echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | tee -a /etc/apt/sources.list.d/signal-xenial.list && \
     apt-get update && apt-get -y install signal-desktop && \
-    apt-get -y install xterm && \
     chmod 4755 /opt/Signal/chrome-sandbox && \
     rm -rf /var/lib/apt/lists/* 
     
